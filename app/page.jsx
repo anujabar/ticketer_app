@@ -6,7 +6,7 @@ import TicketCard from "./(components)/TicketCard.jsx";
 // () non-route folder
 const getTickets=async ()=>{
   try{
-    const res=await fetch("/api/Tickets",{
+    const res=await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/Tickets`,{
       cache:"no-store"// data is not cached, i.e. fetched everytime
     })
     return res.json()

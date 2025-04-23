@@ -13,6 +13,7 @@ const getTickets=async ()=>{
   }
   catch(error){
     console.log("Failed to get tickets",error)
+    return { tickets: [] };
   }
 }
 

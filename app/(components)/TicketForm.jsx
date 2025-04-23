@@ -31,7 +31,7 @@ const TicketForm = ({ticket}) => {
     const handleSubmit=async (e)=>{
         e.preventDefault()
         if(editMode){
-            const response= await fetch(`http://localhost:3000/api/Tickets/${ticket._id}`,{
+            const response= await fetch(`/api/Tickets/${ticket._id}`,{
                 method:"PUT",
                 body:JSON.stringify({formData}),
                 headers:{
@@ -43,7 +43,7 @@ const TicketForm = ({ticket}) => {
             }
         }
         else{
-            const response= await fetch("http://localhost:3000/api/Tickets",{
+            const response= await fetch("/api/Tickets",{
                 method:"POST",
                 body:JSON.stringify({formData}),
                 headers:{
